@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Analysis - Online Voting System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="analysis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Online Voting System</h1>
+        <nav>
+            <ul>
+                <li><a href="manage-polls.html">Manage Polls</a></li>
+                <li><a href="create-poll.html">Create Poll</a></li>
+                <li><a href="#" id="logoutButton">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="analysis-section">
+            <div class="back-button">
+                <a href="#" class="btn btn-back" onclick="window.history.back(); return false;">
+                    <i class="fas fa-arrow-left"></i> Back to Polls
+                </a>
+            </div>
+            
+            <div class="analysis-container">
+                <h2 id="poll-title">Poll Analysis</h2>
+                
+                <div class="charts-container">
+                    <div class="chart-box">
+                        <h3>Vote Distribution</h3>
+                        <canvas id="pieChart"></canvas>
+                        <button id="downloadPieChart" class="btn-download">
+                            <i class="fas fa-download"></i> Download Chart
+                        </button>
+                    </div>
+                    
+                    <div class="chart-box">
+                        <h3>Vote Comparison</h3>
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="statistics-container">
+                    <h3>Statistics</h3>
+                    <div id="statistics" class="stats-grid"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="analysis.js"></script>
+</body>
+</html> 

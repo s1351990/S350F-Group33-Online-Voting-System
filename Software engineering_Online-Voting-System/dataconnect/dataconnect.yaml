@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "Software engineering_Online-Voting-System"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "Software engineering_Online-Voting-System-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]
